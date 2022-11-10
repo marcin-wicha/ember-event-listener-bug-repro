@@ -1,0 +1,10 @@
+{{#if this.showRedBox}}
+  <div
+    id='box'
+    style='background: red; width: 100px; height: 100px'
+    {{on 'click' this.toggleRedBox}}
+    {{on 'click' (if @onClickHandler @onClickHandler this.logOnClick)}}
+  >
+    <span>First listener will hide this box and second callback is never fired</span>
+  </div>
+{{/if}}
